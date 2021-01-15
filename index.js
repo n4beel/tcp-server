@@ -9,7 +9,7 @@ server.on("connection", (socket) => {
 
   socket.on("data", (data) => {
     console.log("received data %s : %s", remoteAddress, data);
-    socket.write("received: " + data.toString());
+    socket.write("received data: " + data.toString());
   });
 
   socket.once("close", () => {
